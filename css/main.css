@@ -94,17 +94,40 @@ header{
 /* Small only */
 @media screen and (max-width: 39.9375em) 
 {
-  
+  .hidden-mobile{
+    display: none;
+  }
+
+  .bar{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 /* Medium and up */
 @media screen and (min-width: 40em)
 {
+  .hidden-nonmobile{
+    display: none;
+  }
   .row{
     display: grid; /*assign grid system*/
     width: 85vw;
     max-width: 70rem;
     margin: 0 auto;
+  }
+
+  .bar{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .metrolics{
+    flex-grow:2; 
   }
   
   .m-col-2{
@@ -129,6 +152,8 @@ header{
     grid-column-end: -1;
   }
 }
+
+
 
 /* Medium only */
 @media screen and (min-width: 40em) and
@@ -178,7 +203,12 @@ header{
 /* ==========================================================================
    THEME
    ========================================================================== */
-
+   .page__slider{
+     background-color: rgb(236, 229, 229);
+   }
+   .page__footer{
+     background-color: #222;
+    }
 
 
 /* ==========================================================================
