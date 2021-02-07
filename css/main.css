@@ -72,13 +72,12 @@ textarea {
 /* ==========================================================================
    LAYOUT
    ========================================================================== */
-/*tempory visual help*/   
+tempory visual help   
 header{
   border: 1px solid #ccc;
 }
 
 .column{
-  background-color: rgb(243, 222, 194);
   margin: 1rem; 
 }
 /*tempory visual help*/    
@@ -94,14 +93,15 @@ span.word-highlight{
 .subheading{
    text-align: center;
    font-size: 14pt;
+   color: #939393;
+}
+.footer{
+  color:#c5c8cb;
 }
 
-p{
-  color: #939393;
+ul.footer-tweets{
+  list-style-image: url(/img/recenttweets.png);
 }
-
-
-
 
 
 /* ==========================================================================
@@ -117,10 +117,12 @@ p{
   .heading{
     font-size: 1.7em;
   }
+
   ul.bar{
     position: relative;
     left: -50px;
   }
+
   .s-hide{
     display: none;
   }
@@ -136,11 +138,13 @@ p{
     display:flex;
     flex-direction: row nowrap;
   }
+
   .about-image{
     margin: 2%;
     padding-top: 3%;
     padding-bottom: 3%;
   }
+
   .about-image > img{
     width: 80px;
   }
@@ -159,9 +163,35 @@ p{
   .project-image{
     text-align: center;
   }
+
   .project-image > img{
     width: 80%;
   }
+  .page__footer__intro{
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: space-between;
+  }
+
+  .bio-image > img{
+    padding-top: 10%;
+    width: 200px;
+  }
+  .bio-description{
+    font-size: .8em;
+    margin-left: 1em;
+  }
+
+  .bio-description > h3{
+    font-size: 1.2em;
+    text-align: left;
+  }
+
+  .footer-icon{
+    width: 80%;
+    margin-left: 10%;
+  }
+
 }
 
 /* Medium and up */
@@ -170,6 +200,7 @@ p{
   .ml-hide{
     display: none;
   }
+
   .row{
     display: grid; /*assign grid system*/
     width: 85vw;
@@ -231,17 +262,44 @@ p{
   .about-activitydescription > p{
     font-size: .3em;
   }
+  .page__footer__intro{
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: space-between;
+  }
+
+  .bio-image > img{
+    padding-top: 10%;
+    width: 100px;
+  }
+
+  .bio-description{
+    font-size: .8em;
+    margin-left: 1em;
+  }
+  
+  .bio-description > h3{
+    font-size: 1.2em;
+    text-align: left;
+  }
+
+  .footer-descriptions{
+    font-size: .5em;
+  }
+
+  .footer-btn{
+    margin-top: 2%;
+    background-color:#de6262;
+  }
+
 }
 
 
-
-/* Medium only */
+/* Medium only
 @media screen and (min-width: 40em) and
 (max-width: 63.9375em) 
 {
-  m-hide{
-    display: none;
-  }
+} */
 
 /* Large and up */
 @media screen and (min-width: 64em)
@@ -268,15 +326,11 @@ p{
   }  
 }
 
-/* Large only */
+/* Large only
 @media screen and (min-width: 64em) and
 (max-width: 74.9375em) 
 {
-  l-hide{
-    display: none;
-  }
-
-}
+} */
 /* ==========================================================================
    THEME
    ========================================================================== */
@@ -284,7 +338,7 @@ p{
      background-color: rgb(236, 229, 229);
    }
    .page__footer{
-     background-color: #222;
+     background-color: #16242f;
     }
 
 
