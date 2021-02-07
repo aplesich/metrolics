@@ -10,6 +10,14 @@ html {
   line-height: 1.4;
 }
 
+img {
+  width: 100%;
+  /*you can also do max width*/
+}
+
+h1 {
+  color: #000;
+}
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -61,15 +69,6 @@ textarea {
   resize: vertical;
 }
 
-img {
-  width: 100%;
-  /*you can also do max width*/
-}
-
-h1 {
-  color: #000;
-}
-
 /* ==========================================================================
    LAYOUT
    ========================================================================== */
@@ -88,13 +87,52 @@ header{
   text-align: center;
 }
 
-/* this row is super important because it sets the large versions max size, and what the margins will expand to be*/
-/*question: what is rem and vw?*/
+span.word-highlight{
+  color :#1eafde;
+}
 
+.subheading{
+   text-align: center;
+}
+
+p{
+  color: #939393;
+}
+
+
+
+
+
+/* ==========================================================================
+   MODULES
+   ========================================================================== */
 /* Small only */
 @media screen and (max-width: 39.9375em) 
-{
-  .hidden-mobile{
+{ 
+  .about-content{
+    display:flex;
+    flex-direction: row nowrap;
+  }
+  .about-image{
+    margin: 2%;
+    padding-top: 3%;
+  }
+  .about-image > img{
+    width: 80px;
+  }
+
+  .about-activitydescription{
+    justify-content: left;
+  }
+
+  .heading{
+    font-size: 1.7em;
+  }
+  ul.bar{
+    position: relative;
+    left: -50px;
+  }
+  .s-hide{
     display: none;
   }
 
@@ -109,7 +147,7 @@ header{
 /* Medium and up */
 @media screen and (min-width: 40em)
 {
-  .hidden-nonmobile{
+  .ml-hide{
     display: none;
   }
   .row{
@@ -159,7 +197,9 @@ header{
 @media screen and (min-width: 40em) and
 (max-width: 63.9375em) 
 {
-
+  m-hide{
+    display: none;
+  }
 }
 
 /* Large and up */
@@ -193,13 +233,6 @@ header{
 {
 
 }
-
-
-
-/* ==========================================================================
-   MODULES
-   ========================================================================== */
-
 /* ==========================================================================
    THEME
    ========================================================================== */
@@ -224,12 +257,6 @@ header{
   display: none !important;
 }
 
-
-
-
-
-
-
 /*
  * Hide only visually, but have it available for screen readers:
  * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
@@ -252,13 +279,6 @@ header{
   /* 1 */
 }
 
-
-
-
-
-
-
-
 /*
  * Extends the .sr-only class to allow the element
  * to be focusable when navigated to via the keyboard:
@@ -275,15 +295,6 @@ header{
   white-space: inherit;
   width: auto;
 }
-
-
-
-
-
-
-
-
-
 
 /*
  * Hide visually and 1from screen readers, but maintain layout
@@ -315,22 +326,7 @@ header{
   clear: both;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
 
 /* ==========================================================================
    Print styles.
